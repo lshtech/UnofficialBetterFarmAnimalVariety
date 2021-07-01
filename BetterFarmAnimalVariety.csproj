@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods\Paritee's Better Farm Animal Variety\BetterFarmAnimalVariety.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AEBEEB2-E842-4532-A9C1-3C589B5A87E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>BetterFarmAnimalVariety</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <ApplicationVersion>3.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>BetterFarmAnimalVariety</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Stardew Valley\smapi-internal\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Netcode">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Netcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Paritee.StardewValley.Core">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods\Paritee's Better Farm Animal Variety\Paritee.StardewValley.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SMAPI.Toolkit.CoreInterfaces">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Stardew Valley\smapi-internal\SMAPI.Toolkit.CoreInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Stardew Valley">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Stardew Valley.exe</HintPath>
+    </Reference>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Stardew Valley\StardewModdingAPI.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="xTile">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Stardew Valley\xTile.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Framework\Decorators\Barn.cs" />
+    <Compile Include="Framework\Patches\Barn\DayUpdate.cs" />
+    <Compile Include="ModConfig.cs" />
+    <Compile Include="ModEntry.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Framework\SaveData\FarmAnimal.cs" />
+    <Compile Include="Framework\SaveData\FarmAnimals.cs" />
+    <Compile Include="Framework\SaveData\TypeLog.cs" />
+    <Compile Include="Framework\Patches\Patch.cs" />
+    <Compile Include="Framework\Patches\Utility\GetPurchaseAnimalStock.cs" />
+    <Compile Include="Framework\Patches\Coop\DayUpdate.cs" />
+    <Compile Include="Framework\Patches\PurchaseAnimalsMenu\Constructor.cs" />
+    <Compile Include="Framework\Patches\PurchaseAnimalsMenu\Draw.cs" />
+    <Compile Include="Framework\Patches\PurchaseAnimalsMenu\ReceiveLeftClick.cs" />
+    <Compile Include="Framework\Patches\PurchaseAnimalsMenu\GetAnimalDescription.cs" />
+    <Compile Include="Framework\Patches\PurchaseAnimalsMenu\GetAnimalTitle.cs" />
+    <Compile Include="Framework\Patches\Object\DayUpdate.cs" />
+    <Compile Include="Framework\Patches\FarmAnimal\Behaviors.cs" />
+    <Compile Include="Framework\Patches\FarmAnimal\DayUpdate.cs" />
+    <Compile Include="Framework\Patches\FarmAnimal\FindTruffle.cs" />
+    <Compile Include="Framework\Patches\FarmAnimal\Reload.cs" />
+    <Compile Include="Framework\Patches\AnimalHouse\ResetSharedState.cs" />
+    <Compile Include="Framework\Patches\AnimalHouse\AddNewHatchedAnimal.cs" />
+    <Compile Include="Framework\Loaders\FarmAnimalSprites.cs" />
+    <Compile Include="Framework\Api\IBetterFarmAnimalVariety.cs" />
+    <Compile Include="Framework\Api\IJsonAssets.cs" />
+    <Compile Include="Framework\Api\IMoreAnimals.cs" />
+    <Compile Include="Framework\Api\BetterFarmAnimalVariety.cs" />
+    <Compile Include="Framework\Helpers\Assert.cs" />
+    <Compile Include="Framework\Helpers\FarmAnimals.cs" />
+    <Compile Include="Framework\Helpers\Mod.cs" />
+    <Compile Include="Framework\Exceptions\ApiNotFoundException.cs" />
+    <Compile Include="Framework\Exceptions\SaveNotLoadedException.cs" />
+    <Compile Include="Framework\Events\IntegrateWithJsonAssets.cs" />
+    <Compile Include="Framework\Events\RefreshCache.cs" />
+    <Compile Include="Framework\Events\IntegrateWithMoreAnimals.cs" />
+    <Compile Include="Framework\Events\LoadContentPacks.cs" />
+    <Compile Include="Framework\Events\LoadMod.cs" />
+    <Compile Include="Framework\Events\MigrateDeprecatedConfig.cs" />
+    <Compile Include="Framework\Events\ConvertDirtyFarmAnimals.cs" />
+    <Compile Include="Framework\Editors\FarmAnimalData.cs" />
+    <Compile Include="Framework\Editors\AnimalBirth.cs" />
+    <Compile Include="Framework\Decorators\AutoGrabber.cs" />
+    <Compile Include="Framework\Decorators\Decorator.cs" />
+    <Compile Include="Framework\Decorators\AnimalHouse.cs" />
+    <Compile Include="Framework\Decorators\Building.cs" />
+    <Compile Include="Framework\Decorators\Coop.cs" />
+    <Compile Include="Framework\Decorators\FarmAnimal.cs" />
+    <Compile Include="Framework\Decorators\Farmer.cs" />
+    <Compile Include="Framework\Decorators\Incubator.cs" />
+    <Compile Include="Framework\Decorators\Location.cs" />
+    <Compile Include="Framework\Decorators\PurchaseAnimalsMenu.cs" />
+    <Compile Include="Framework\ContentPacks\Category.cs" />
+    <Compile Include="Framework\ContentPacks\Content.cs" />
+    <Compile Include="Framework\Constants\ContentPack.cs" />
+    <Compile Include="Framework\Constants\Integration.cs" />
+    <Compile Include="Framework\Constants\Mod.cs" />
+    <Compile Include="Framework\Config\V2\ConfigFarmAnimal.cs" />
+    <Compile Include="Framework\Config\V2\ConfigFarmAnimalAnimalShop.cs" />
+    <Compile Include="Framework\Config\V2\ModConfig.cs" />
+    <Compile Include="Framework\Commands\Command.cs" />
+    <Compile Include="Framework\Commands\List.cs" />
+    <Compile Include="Framework\Cache\FarmAnimalCategory.cs" />
+    <Compile Include="Framework\Cache\FarmAnimalSprites.cs" />
+    <Compile Include="Framework\Cache\FarmAnimalStock.cs" />
+    <Compile Include="Framework\Cache\FarmAnimalType.cs" />
+    <Compile Include="Framework\Cache\FarmAnimals.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
